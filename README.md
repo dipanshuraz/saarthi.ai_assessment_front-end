@@ -1,6 +1,7 @@
 
 # Employee Management System - Saarthi.ai
 
+- [x] frontend  - Netlify
 - [x] frontend  - Heroku
 
 ## Problem Statement
@@ -32,7 +33,7 @@ Note: Create separate file for HTML/CSS/Javascript(Angular/React) and for applic
 
 ## Demo Link
 Open Here  - 
-[ **Demo** ]()
+[ **Demo Netlify** ](https://elegant-elion-24e194.netlify.app/)
 
 ### Tech / Stack:
 
