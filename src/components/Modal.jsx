@@ -1,31 +1,43 @@
-import React from "react";
-import "./modal.css";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
+// import PropTypes from "prop-types";
 import Form from './Form'
 
-export default class Modal extends React.Component {
-  onClose = e => {
-    this.props.onClose && this.props.onClose(e);
+class Modal extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+
+    }
+  }
+
+  onClose = () => {
+    this.props.showModal(false)
   };
+
   render() {
     if (!this.props.show) {
       return null;
     }
     return (
-      <div class="modal" id="modal">
-        <h2>Modal Window</h2>
-        <div class="content">{this.props.children}</div>
-        <Form />
-        <div class="actions">
-          <button class="toggle-button" onClick={this.onClose}>
-            close
-          </button>
+      <div className="parent" >
+        <div class="modal" id="modal">
+          <div className="row" >
+
+            <button class="btn-close text-danger" onClick={this.onClose}>
+              <i class="fa-2x fas fa-times text-danger"></i>
+            </button>
+          </div>
+          <Form />
         </div>
       </div>
     );
   }
 }
-Modal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool.isRequired
-};
+// Modal.propTypes = {
+//   onClose: PropTypes.func.isRequired,
+//   show: PropTypes.bool.isRequired
+// };
+
+
+export default Modal

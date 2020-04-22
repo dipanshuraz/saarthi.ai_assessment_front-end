@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Utils */
+.font-1 {
+  font-size: 1rem;
+}
+.text-dark {
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-danger {
+  color: rgb(245, 69, 69);
+}
+.text-danger-bg {
+  color: rgb(245, 69, 69);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+	cursor:pointer;
+  font-weight: bold;
+  display:inline-block;
+  border: none;
+}
+
+.btn-close {
+  border-radius:6px;
+	font-size:1.2rem;
+	font-weight:bold;
+	padding:0.6rem 1rem;
+  background-color: rgb(247, 247, 247);
+}
+
+.delete-button-employee {
+  color: rgb(245, 69, 69);
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid rgb(245, 238, 238);
+  font-size: 1.4rem;
+  border-radius: 50%;
+}
+
+
+/* Parent */
+
+.parent {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background-color: rgba(119, 119, 119, 0.6);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+/* Modal - form */
+.modal {
+  border-radius: 5px;
+  height: 80vh;
+  width: 60vw;
+  background-color: rgb(247, 247, 247);
+  margin: auto;
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.7);
+}
+.modal .row {
+  display: flex;
+  justify-content: flex-end;
+align-items: center;
+}
+
+form {
+display: flex;
+justify-content: center;
+}
+
+form input {
+height: 1.5rem;
+display: block;
+width: 100%;
+border: none;
+border-bottom: 2px solid black;
+background-color:  rgb(247, 247, 247);
+font-size: 1rem;
+margin: 0.5rem 0px;
+}
+
+form input:active, 
+form input:visited {
+  background-color:  rgb(247, 247, 247);
+}
+
+
+
+.calendar-style {
+  margin: 0.5rem 0px;
+}
+
+.btn-submit {
+	background-color:#459ec7;
+	border-radius:10px;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:1rem;
+	padding:0.5rem 1.5rem;
+  text-shadow:0px 1px 0px #000000;
+  margin-left: 1rem;
+}
+.btn-submit:hover {
+	background-color:#0f719e;
+}
+.btn-submit:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-reset {
+	background-color:#8d6e63;
+	border-radius:10px;
+	color:#ffffff;
+	font-size:1rem;
+	padding:0.5rem 1.5rem;
+  text-shadow:0px 1px 0px #000000;
+  margin-left: 1rem;
+}
+.btn-reset:hover {
+	background-color:#6d4c41
+}
+.btn-reset:active {
+	position:relative;
+	top:1px;
+}
+        
+
+        
+
+
+/* Header */
+header {
+  height: 10vh;
+  background-color: #e4eaec;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+header nav {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header nav button {
+  background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+}
+
+.title-logo {
+
+}
+
+/* Main */
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  height: 5vh;
+  background-color: #cfd8dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer p {
+  font-weight: bold;
+  display: inline-block;
+}
+.footer-logo {
+  color: rgb(0, 0, 0);
+}
+/* Table */
+table {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: black;
+}
+
+table th, table td {
+  padding: 5px;
+  width: 20%;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: white;  
+}
+table th {
+  background-color :#4f87a3;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 1rem ;
+}
+
+thead {
+  position: sticky;
+}
+
+thead tr {
+  display: block;
+}
+
+tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 70vh;
+}
+
+tbody tr, thead tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem 0px;
+}
+
+tr:nth-child(odd) {
+  background-color:#0097a7;
+}
+tr:nth-child(even) {
+  background-color:#00796b;
 }
