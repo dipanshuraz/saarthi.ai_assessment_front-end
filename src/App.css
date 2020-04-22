@@ -45,6 +45,7 @@ button {
   border: 1px solid rgb(245, 238, 238);
   font-size: 1.4rem;
   border-radius: 50%;
+  background-color: white;
 }
 
 
@@ -79,19 +80,19 @@ display: flex;
 justify-content: center;
 }
 
-form input {
+form input , form select{
 height: 1.5rem;
 display: block;
 width: 100%;
-border: none;
-border-bottom: 2px solid black;
 background-color:  rgb(247, 247, 247);
 font-size: 1rem;
 margin: 0.5rem 0px;
 }
 
 form input:active, 
-form input:visited {
+form input:visited,
+form select:active,
+form select:visited {
   background-color:  rgb(247, 247, 247);
 }
 

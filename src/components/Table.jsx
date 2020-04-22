@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteEmployee } from '../redux/action'
+import { toast, Flip } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
+
+toast.configure(
+  {
+    autoClose: 4000,
+    hideProgressBar: true,
+    transition: Flip,
+  }
+)
 
 export class Table extends Component {
   constructor(props) {
@@ -11,8 +21,14 @@ export class Table extends Component {
     }
   }
 
+  deleteEmp = (id) => {
+    const { deleteEmployee } = this.props
+    deleteEmployee(id)
+    toast.error("Deleted Successfully ")
+  }
+
   render() {
-    const { data, deleteEmployee } = this.props
+    const { data } = this.props
     return (
       <div>
         <table>
@@ -35,7 +51,7 @@ export class Table extends Component {
                   <td>{elem.department}</td>
                   <td>{elem.emailId}</td>
                   <td>{elem.dateOfJoining}</td>
-                  <td><button className='delete-button-employee' onClick={() => deleteEmployee(elem.id)}><i class="fas fa-times"></i></button></td>
+                  <td><button className='delete-button-employee' onClick={() => this.deleteEmp(elem.id)}><i class="fas fa-times"></i></button></td>
                 </tr>
               )
             })}

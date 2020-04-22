@@ -25,7 +25,9 @@ export class App extends Component {
     const { data } = this.props
     return (
       <div className=''>
+
         <Modal showModal={this.showModal} show={this.state.show} />
+
         <header>
           <nav>
             <h1 className='title-logo'>MyEmployee</h1>
@@ -56,9 +58,5 @@ const mapStateToProps = (state) => ({
   data: state.data
 })
 
-const mapDispatchToProps = {
 
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, {})(App)
