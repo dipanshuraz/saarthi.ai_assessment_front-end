@@ -1,9 +1,87 @@
+
+# Employee Management System - Saarthi.ai
+
+- [x] frontend  - Heroku
+
+## Problem Statement
+FRONT-END WEB DEVELOPER ASSESSMENT
+
+### Instructions:
+
+1. Create a Button - New Employee
+2. On click of New Employee Button a FORM should pop up asking below input to be filled:
+* a Name - text field
+* b Employee ID - text field.
+* c Department - dropdown , add any five values.
+* d Email Id - text
+* e Date of Joining(DOJ) - add calendar to select date. f Submit Details - a button to submit data.
+* g Clear - a button to clear form data.
+  On click of Submit Details button, FORM should get closed and a dynamic table gets
+3. created on same page with all the table field and data mentioned in step2(a-e).
+
+*  Form should not get submitted with empty data. 
+*  Empty entry error message should be thrown. 
+*  Table should be scrollable with fixed header row.
+
+4. A cross. button gets generated at each table row to delete any entry dynamically, deleted entry should get reflected immediately. 
+5. Complete application should be responsive. 
+6. Styling should be done in CSS.
+7. Technology to Use :- HTML/CSS/Javascript/jQuery OR Angular/React.
+Note: Create separate file for HTML/CSS/Javascript(Angular/React) and for application logic
+
+## Demo Link
+Open Here  - 
+[ **Demo** ]()
+
+### Tech / Stack:
+
+ - HTML5
+ - CSS3 
+ - JavaScript
+ - React 
+ - Redux
+ 
+### Features implemented:
+- [x] Add Employee
+- [x] Delete Employee
+- [x] Custom Modal
+- [x] Toasts
+- [x] React Calendar
+
+
+
+
+## Required UI : 
+![Screenshot](./extra/ui.png)
+<br/>
+
+## My UI :
+
+Step 1 :
+![Screenshot](./extra/1.png)
+Step 2 : 
+<br/>
+
+![Screenshot](./extra/2.png)
+Step 3 : 
+<br/>
+
+![Screenshot](./extra/3.png)
+Step 4 : 
+<br/>
+
+![Screenshot](./extra/4.png)
+<br/>
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.<br />
@@ -11,59 +89,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# saarthi.ai_assessment_front-end
+ - Truck Tracking System with Realtime API - Remote State
