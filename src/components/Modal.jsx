@@ -172,8 +172,8 @@ class Modal extends Component {
                   value={this.state.date}
                 />
               </li>
-              <li>
-                <button className='btn-submit' type='submit' onClick={this.submitForm}> Submit Details</button>
+              <li className='flex'>
+                <button className='btn-submit' type='submit' onClick={this.submitForm}> Add</button>
                 <button className='btn-reset' type='button' onClick={this.resetInputs}>Clear</button>
               </li>
             </ul>

@@ -27,6 +27,7 @@ FRONT-END WEB DEVELOPER ASSESSMENT
 5. Complete application should be responsive. 
 6. Styling should be done in CSS.
 7. Technology to Use :- HTML/CSS/Javascript/jQuery OR Angular/React.
+<br/>
 Note: Create separate file for HTML/CSS/Javascript(Angular/React) and for application logic
 
 ## Demo Link
@@ -71,6 +72,15 @@ Step 4 :
 <br/>
 
 ![Screenshot](./extra/4.png)
+<br/>
+
+![Screenshot](./extra/5.png)
+<br/>
+
+![Screenshot](./extra/6.png)
+<br/>
+
+![Screenshot](./extra/7.png)
 <br/>
 
 

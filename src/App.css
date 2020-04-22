@@ -186,6 +186,12 @@ main {
   align-items: center;
 }
 
+.img {
+  background: url('/ui.png') no-repeat center center/cover;
+  height: 50vh;
+  width: 50vw;
+}
+
 /* Footer */
 footer {
   height: 5vh;
@@ -207,8 +213,11 @@ footer p {
   color: rgb(0, 0, 0);
 }
 /* Table */
+.table-container {
+  width: 90vw;
+}
 table {
-  width: 100%;
+  width: 1300px;
   text-align: center;
   table-layout: fixed;
   border-collapse: collapse;
@@ -256,4 +265,45 @@ tr:nth-child(odd) {
 }
 tr:nth-child(even) {
   background-color:#00796b;
+}
+
+@media only screen and (min-width: 1024px) {
+ table {
+  width: 95%;
+ }
+}
+
+@media only screen and (max-width: 900px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+  .modal {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .calendar-style {
+    margin: 0;
+  }
+  form ul {
+    width: 90%;
+  }
+    .modal {
+      width: 85vw;
+      height: 90vh;
+    }
+    .modal form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+    }
+ 
 }

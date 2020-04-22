@@ -6,6 +6,7 @@ import Modal from './components/Modal';
 import Table from './components/Table';
 import { connect } from 'react-redux'
 import { showModal } from './redux/action'
+import Image from './components/Image'
 
 export class App extends Component {
   constructor(props) {
@@ -31,7 +32,8 @@ export class App extends Component {
         </header>
 
         <main>
-          <Table />
+
+          {data.length ? <Table /> : <Image />}
         </main>
         <footer>
 

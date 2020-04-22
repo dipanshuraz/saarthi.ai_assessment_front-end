@@ -31,7 +31,7 @@ export class Table extends Component {
   render() {
     const { data } = this.props
     return (
-      <div>
+      <div className='table-container'>
         <table>
           <thead>
             <tr>
