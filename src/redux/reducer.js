@@ -1,10 +1,13 @@
 import {
   ADD_NEW_EMPLOYEE,
-  DELETE_A_EMPLOYEE
+  DELETE_A_EMPLOYEE,
+  SHOW_MODAL,
+  HIDE_MODAL
 } from './actionType'
 
 const initialState = {
-  data: []
+  data: [],
+  modalFlag: false
 }
 
 export default (state = initialState, action) => {
@@ -23,6 +26,16 @@ export default (state = initialState, action) => {
       return {
         ...state, data: arr
       }
+    case SHOW_MODAL: {
+      return {
+        ...state, modalFlag: true
+      }
+    }
+    case HIDE_MODAL: {
+      return {
+        ...state, modalFlag: false
+      }
+    }
     default:
       return state
   }

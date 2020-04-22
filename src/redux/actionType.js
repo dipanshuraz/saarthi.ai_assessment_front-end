@@ -1,2 +1,4 @@
 export const ADD_NEW_EMPLOYEE = 'ADD_NEW_EMPLOYEE'
 export const DELETE_A_EMPLOYEE = 'DELETE_A_EMPLOYEE'
+export const SHOW_MODAL = 'SHOW_MODAL'
+export const HIDE_MODAL = 'HIDE_MODAL'

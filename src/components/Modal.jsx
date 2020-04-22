@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux'
-import { addEmployee } from '../redux/action'
+import { addEmployee, hideModal } from '../redux/action'
 import uniqid from 'uniqid'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
@@ -95,7 +95,8 @@ class Modal extends Component {
 
   }
   onClose = () => {
-    this.props.showModal(false)
+    const { hideModal } = this.props
+    hideModal()
   };
 
   resetInputsSubmit = () => {
@@ -122,18 +123,14 @@ class Modal extends Component {
     }, () => toast.info('Reset Successfully'))
   }
 
-
-  onClose = () => {
-    this.props.showModal(false)
-  };
-
   render() {
-    if (!this.props.show) {
+
+    const { name, employeeId, department, emailId } = this.state
+    const { modalFlag } = this.props
+    if (!modalFlag) {
       return null;
     }
-    const { name, employeeId, department, emailId } = this.state
     return (
-
       <div className="parent" >
         <div class="modal" id="modal">
           <div className="row" >
@@ -187,16 +184,18 @@ class Modal extends Component {
   }
 }
 Modal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool.isRequired
+  addEmployee: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  modalFlag: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => ({
-
+  modalFlag: state.modalFlag
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addEmployee: payload => dispatch(addEmployee(payload))
+  addEmployee: payload => dispatch(addEmployee(payload)),
+  hideModal: () => dispatch(hideModal())
 })
 
 

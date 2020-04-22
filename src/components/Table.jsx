@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from "prop-types";
 import { deleteEmployee } from '../redux/action'
 import { toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
@@ -61,6 +62,11 @@ export class Table extends Component {
     )
   }
 }
+
+Table.propTypes = {
+  deleteEmployee: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired
+};
 
 const mapStateToProps = (state) => ({
   data: state.data
