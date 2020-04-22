@@ -280,6 +280,11 @@ tr:nth-child(even) {
   .modal {
     padding: 1rem;
   }
+  .img {
+    
+    height: 50vh;
+    width: 80vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
